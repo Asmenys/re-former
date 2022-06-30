@@ -10,12 +10,13 @@
     </fieldset>
     <button type="submit">Submit</button>
 </form>%>
-<%=form_tag("/users", method: "post") do %>
-    <%= label_tag(:username, "Username:")%>
-    <%= text_field_tag(:username)%>
-    <%= label_tag(:email, "Email:")%>
-    <%= text_field_tag(:email)%>
-    <%= label_tag(:password, "Password:")%>
-    <%= text_field_tag(:password)%>
-    <%= submit_tag("Submit")%>
+
+<%= form_with model:@user do |form| %>
+<%= form.label :username, "Username: "%>
+<%= form.text_field :username%>
+<%= form.label :email, "email: "%>
+<%= form.text_field :email%>
+<%= form.label :password, "Password: "%>
+<%= form.text_field :password %>
+<%= form.submit "Submit" %>
 <% end %>
