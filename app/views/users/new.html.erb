@@ -1,4 +1,4 @@
-<form accept-charset="UTF-8" action="/users" method="post">
+<%#<form accept-charset="UTF-8" action="/users" method="post">
 
     <fieldset>
     <label for="username">Username:</label>
@@ -9,4 +9,13 @@
     <input id = "password" type="text" name="user[password]">
     </fieldset>
     <button type="submit">Submit</button>
-</form>
+</form>%>
+<%=form_tag("/users", method: "post") do %>
+    <%= label_tag(:username, "Username:")%>
+    <%= text_field_tag(:username)%>
+    <%= label_tag(:email, "Email:")%>
+    <%= text_field_tag(:email)%>
+    <%= label_tag(:password, "Password:")%>
+    <%= text_field_tag(:password)%>
+    <%= submit_tag("Submit")%>
+<% end %>
