@@ -13,10 +13,10 @@
 
 <%= form_with model:@user do |form| %>
 <%= form.label :username, "Username: "%>
-<%= form.text_field :username%>
+<%= form.text_field :username, placeholder:"Thomas Timothy"%>
 <%= form.label :email, "email: "%>
-<%= form.text_field :email%>
+<%= form.text_field :email, placeholder: "your@gmail.com"%>
 <%= form.label :password, "Password: "%>
-<%= form.text_field :password %>
+<%= form.text_field :password, placeholder: "123456789" %>
 <%= form.submit "Submit" %>
 <% end %>
