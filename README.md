@@ -1,6 +1,5 @@
 # README
-This is part of the Forms Project in The Odin Project’s Ruby on Rails Curriculum. Find it at http://www.theodinproject.com
-
+This is an attempt at setting up a form that allows creation of an user in a database and editing that user later using the same form.
 
 
 
