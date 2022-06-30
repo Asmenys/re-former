@@ -1,0 +1,19 @@
+
+<% if @user.errors.any?%>
+<div id="error-explanation">
+<ul>
+    <% @user.errors.each do |error|%>
+    <li><%=error.full_message%></li>
+    <% end %>
+</ul>
+</div>
+<% end %>
+<%= form_with model:@user do |form| %>
+<%= form.label :username, "Username: "%>
+<%= form.text_field :username, placeholder:"Thomas Timothy"%>
+<%= form.label :email, "email: "%>
+<%= form.text_field :email, placeholder: "your@gmail.com"%>
+<%= form.label :password, "Password: "%>
+<%= form.text_field :password, placeholder: "123456789" %>
+<%= form.submit "Submit" %>
+<% end %>
